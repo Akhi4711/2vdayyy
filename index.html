@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Be My Valentine 💌</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg-hearts" aria-hidden="true"></div>
+
+  <!-- PAGE 1: Envelope -->
+  <main class="page page-envelope" id="pageEnvelope">
+    <div class="envelope-wrap">
+      <button class="envelope" id="openEnvelope" aria-label="Open the envelope">
+        <div class="env-top"></div>
+        <div class="env-body">
+          <div class="stamp">💘</div>
+          <div class="env-text">
+            <div class="title">A little Appreciation to My 3omriii</div>
+            <div class="subtitle">TO My FAVORITE LANA THE BANANA</div>
+          </div>
+        </div>
+      </button>
+
+      <div class="hint">💌 Click to open</div>
+    </div>
+  </main>
+
+  <!-- PAGE 2: Valentine Question -->
+  <main class="page page-question hidden" id="pageQuestion">
+    <header class="hero">
+      <h1>Will you be my Valentine? 💖</h1>
+      <p class="soft">I made this just for you 💌</p>
+    </header>
+
+    <!-- Polaroid upgraded gallery (TOP) -->
+    <section class="gallery polaroid">
+      <figure class="shot left">
+        <div class="frame glow-pink">
+          <img src="assets/photo1.jpg" alt="Photo 1" onerror="this.style.display='none'" />
+        </div>
+        <figcaption>my favorite moment 🌸</figcaption>
+      </figure>
+
+      <figure class="shot right">
+        <div class="frame glow-night">
+          <img src="assets/photo2.jpg" alt="Photo 2" onerror="this.style.display='none'" />
+          <div class="vignette"></div>
+        </div>
+        <figcaption>secret vibes 🤫</figcaption>
+      </figure>
+    </section>
+
+    <section class="card">
+      <div class="buttons">
+        <button class="btn yes" id="yesBtn">Yes 💗</button>
+        <button class="btn no" id="noBtn">No 🙄</button>
+      </div>
+      <p class="micro">*Try to press "No"… if you can 😈</p>
+    </section>
+  </main>
+
+  <!-- YES Celebration Overlay -->
+  <div class="overlay hidden" id="yesOverlay" role="dialog" aria-modal="true">
+    <div class="overlay-card">
+      <div class="heart-layer" id="heartLayer"></div>
+
+      <div class="slideshow" id="slideshow">
+        <img src="assets/slide1.jpg" class="slide active" alt="Slide 1" onerror="this.style.display='none'">
+        <img src="assets/slide2.jpg" class="slide" alt="Slide 2" onerror="this.style.display='none'">
+        <img src="assets/slide3.jpg" class="slide" alt="Slide 3" onerror="this.style.display='none'">
+        <img src="assets/slide4.jpg" class="slide" alt="Slide 4" onerror="this.style.display='none'">
+        <img src="assets/slide5.jpg" class="slide" alt="Slide 5" onerror="this.style.display='none'">
+        <img src="assets/slide6.jpg" class="slide optional-slide" alt="Slide 6" onerror="this.style.display='none'">
+        <img src="assets/slide7.jpg" class="slide optional-slide" alt="Slide 7" onerror="this.style.display='none'">
+      </div>
+
+      <h2 class="final-text" id="finalText">You're stuck with me now 💕</h2>
+
+      <button class="btn small" id="closeYes">Close</button>
+    </div>
+  </div>
+
+  <!-- NO Popup -->
+  <div class="overlay hidden" id="noOverlay" role="dialog" aria-modal="true">
+    <div class="overlay-card">
+      <h2>NO??? 😭</h2>
+      <p class="soft">Look what you did…</p>
+
+      <img class="funny-pic" src="assets/her-funny.jpg" alt="Funny photo" onerror="this.style.display='none'" />
+      <p class="micro">Fine. Try again 😌</p>
+
+      <button class="btn small" id="closeNo">Try again</button>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="siuuuAudio" preload="auto">
+    <source src="assets/siiuu.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
